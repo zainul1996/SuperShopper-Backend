@@ -7,7 +7,6 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const _ = require("lodash");
 const app = express();
-const fs = require("fs");
 
 // enable files upload
 app.use(
