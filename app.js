@@ -62,6 +62,9 @@ app.post("/upload-image", async (req, res) => {
         return;
       }
       vision.detectText("./uploads/" + tag_image.name).then(function (price) {
+        console.log(tag_image.name);
+        console.log(tag_image.size);
+        console.log(tag_image.mimetype);
         fs.unlinkSync("./uploads/" + tag_image.name);
         console.log("file removed");
         res.setHeader("Content-Type", "application/json");
